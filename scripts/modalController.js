@@ -4,7 +4,7 @@ export const modalController = ({
   modal,
   btnOpen,
   btnClose,
-  time = 300,
+  time = 600,
   open,
   close,
 }) => {
@@ -12,7 +12,7 @@ export const modalController = ({
   const modalElem = document.querySelector(modal);
 
   modalElem.style.cssText = `
-    display: flex;
+    display: none;
     visibility: hidden;
     opacity: 0;
     transition: opacity ${time}ms ease-in-out;
@@ -32,6 +32,7 @@ export const modalController = ({
 
       setTimeout(() => {
         modalElem.style.visibility = "hidden";
+        modalElem.style.display = "none";
         scrollOptions.enabledScroll();
 
         if (close) {
@@ -48,8 +49,11 @@ export const modalController = ({
       open({ btn: e.target });
     }
 
-    modalElem.style.visibility = "visible";
-    modalElem.style.opacity = 1;
+    setTimeout(() => {
+      modalElem.style.visibility = "visible";
+      modalElem.style.display = "flex";
+      modalElem.style.opacity = 1;
+    }, 300);
 
     window.addEventListener("keydown", closeModal);
     scrollOptions.disabledScroll();
@@ -63,6 +67,6 @@ export const modalController = ({
 
   modalElem.closeModal = closeModal;
   modalElem.openModal = openModal;
-  
+
   return { openModal, closeModal };
 };
