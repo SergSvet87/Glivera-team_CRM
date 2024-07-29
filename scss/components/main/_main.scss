@@ -1,0 +1,59 @@
+@import "content";
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 41px 0px 41px 0px;
+
+    @include mobile {
+        padding: 25px 0;
+      }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__mobile-menu {
+        display: none;
+
+        @include tablet {
+            display: block;
+          }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__content {
+        padding: 30px 40px 40px 38px;
+        border-radius: 30px;
+        background-color: #fff;
+        box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+
+        @include laptop {
+            padding: 20px 15px;
+          }
+
+        @include tablet {
+            padding: 15px 10px;
+          }
+        
+          @include mobile {
+            padding: 10px 7px;
+          }
+
+        &.tab.is-active {
+            display: block;
+        }
+
+        &.tab {
+            display: none;
+        }
+    }
+}

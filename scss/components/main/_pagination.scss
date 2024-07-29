@@ -1,0 +1,56 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @include mobile {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+    &__text {
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        color: $grey;
+    }
+
+    &__btns {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 12px;
+
+        @include tablet {
+            padding: 3px 5px;
+          }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        padding: 6px 8px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        color: #404b52;
+        background: $bg-btn;
+        transition: box-shadow 0.3s ease-in-out;
+
+        &_active {            
+        background: $blue;
+        color: $white;
+        border: 1px solid $blue;
+        }
+
+        &:hover {
+            box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.8);
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@import "logo";
+@import "menu";
+@import "footer";
+
+.sidebar {
+  height: 100vh;
+  flex: 0 1 306px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 36px 28px 76px 28px;
+  box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
+  background-color: $white;
+
+  
+
+  @include laptop {
+    flex: 0 1 240px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  &__logo {
+    margin-bottom: 44px;
+  }
+
+  &__menu {
+    flex: 1 0 auto;
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+  }
+
+}

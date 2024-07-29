@@ -1,0 +1,22 @@
+@import "top";
+@import "table";
+@import "table-mobile";
+@import "pagination";
+
+.content {
+    &__top {
+        margin-bottom: 40px;
+
+        @include tablet {
+            margin-bottom: 30px;
+          }
+
+        @include mobile {
+            margin-bottom: 20px;
+          }
+    }
+
+    &__table {
+        margin-bottom: 32px;
+    }
+}

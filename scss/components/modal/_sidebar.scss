@@ -1,0 +1,13 @@
+.sidebar-modal {
+        background-color: $white;
+        border-radius: 30px;
+        padding: 15px;
+
+        &__logo {
+            margin-bottom: 15px;
+        }
+
+        &__menu {
+            margin-bottom: 20px;
+        }
+    }

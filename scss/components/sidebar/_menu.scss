@@ -1,0 +1,45 @@
+.menu {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 29px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: #9197b3;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 11px 8px 11px 11px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &.is-active {
+            border-radius: 8px;
+            background-color: $blue;
+            color: $white;
+
+            svg {
+                stroke: $white;
+            }
+        }
+
+        &:not(:first-child)::after {
+            content: ">";
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            right: 0;
+            align-self: center;
+        }
+
+        &:hover {
+            background-color: rgba($green, 0.4);
+            box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.table {
+    position: relative;
+    width: 100%;
+    text-align: left;
+
+    @include mobile {
+        display: none;
+    }
+
+    &__cell {
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: #292d32;
+        padding: 24px 0;
+        border-bottom: 1px solid #eee;
+
+        @include tablet {
+            font-size: 10px;
+            padding: 15px 0;
+        }
+
+        @include mobile {
+            border-bottom: none;
+        }
+    }
+
+    &__head {
+        &-cell {
+            color: $grey;
+
+            &:nth-child(1) {
+                width: 20%;
+            }
+
+            &:nth-child(2) {
+                width: 12%;
+            }
+
+            &:nth-child(3) {
+                width: 20%;
+            }
+
+            &:nth-child(4) {
+                width: 23%;
+            }
+
+            &:nth-child(5) {
+                width: 16%;
+            }
+
+            @include laptop {
+                &:nth-child(6) {
+                    width: 8%;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        width: 80px;
+        border: 1px solid #00b087;
+        border-radius: 4px;
+        padding: 4px 12px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: #292d32;
+        background-color: rgba(22, 192, 152, 0.38);
+        transition: all 0.3s ease-in-out;
+
+        @include laptop {
+            width: 70px;
+            font-size: 12px;
+            padding: 4px 10px;
+        }
+
+        @include tablet {
+            width: 60px;
+            font-size: 10px;
+            padding: 3px 8px;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: rgba(20, 143, 114, 0.38);
+        }
+
+        &_inactive {
+            color: $red;
+            background-color: $pink;
+            border-color: $red;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $red;
+                background-color: #e79797;
+            }
+        }
+    }
+
+    &_mobile {
+        display: none;
+        width: 100%;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-table__item {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+
+            p {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px;
+
+                span {
+                    width: 50%;
+                    display: inline-block;
+                }
+            }
+
+            &:nth-child(even) {
+                background-color: $bg;
+                border-color: #c1c1c1;
+            }
+        }
+    }
+}
