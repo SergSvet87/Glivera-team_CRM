@@ -1,4 +1,5 @@
 import { tabs } from "./tabs.js";
+import { animation } from "./animation.js";
 import { modalController } from "./modalController.js";
 
 const initApp = () => {

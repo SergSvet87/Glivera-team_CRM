@@ -12,17 +12,22 @@
     &__text {
         font-weight: 500;
         font-size: 14px;
-        letter-spacing: -0.01em;
+        letter-spacing: 0em;
         color: $grey;
     }
 
     &__btns {
         display: flex;
         flex-wrap: nowrap;
-        gap: 12px;
+        gap: 13px;
 
         @include tablet {
             padding: 3px 5px;
+          }
+
+          span {
+            display: inline-block;
+            letter-spacing: -0.01em;
           }
     }
 

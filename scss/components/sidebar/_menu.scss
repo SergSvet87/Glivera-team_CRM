@@ -3,7 +3,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 29px;
+        gap: 18px;
         font-weight: 500;
         letter-spacing: -0.01em;
         color: #9197b3;
@@ -30,11 +30,12 @@
 
         &:not(:first-child)::after {
             content: ">";
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             position: absolute;
             right: 0;
             align-self: center;
+            font-size: 18px;
         }
 
         &:hover {
